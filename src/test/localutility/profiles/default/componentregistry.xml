@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<componentregistry>
+  <adapters>
+  </adapters>
+  <utilities>
+    <utility
+      interface="test.localutilitycomponent.ITestUtility"
+      factory="test.localutility.component.TestUtility"
+      />
+  </utilities>
+</componentregistry>
