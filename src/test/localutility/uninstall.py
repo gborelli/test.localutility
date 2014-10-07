@@ -1,4 +1,5 @@
 from .component import ITestUtility
+from .component import TestUtility
 
 
 def uninistall_utility(site):
@@ -19,12 +20,12 @@ def uninistall_utility(site):
             del subscribers[0][ITestUtility]
         sm.utilities._subscribers = subscribers
 
-        # regsistrations = sm._utility_registrations
-        # _utility_registrations
-        # _reconstructor
-        # utilities
-
-    # import pdb; pdb.set_trace()
+        for k, item in site._components.items():
+            if isinstance(item, TestUtility):
+                if not hasattr(item, 'wl_isLocked'):
+                    item.wl_isLocked = lambda: 0
+                site._components.manage_delObjects(k)
+                del item
 
 
 def uninstall(context):
