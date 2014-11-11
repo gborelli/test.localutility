@@ -14,9 +14,8 @@ from plone.app.dexterity.behaviors.metadata import DCFieldProperty
 
 class ITestBehavior(model.Schema):
 
-    #form.widget(image_relation=ContentTreeFieldWidget)
     image_relation_x = RelationChoice(
-        title=u"Lead Image - related",
+        title=u"Lead Image - field nel behavior",
         source=ObjPathSourceBinder(
             object_provides=IImage.__identifier__
         ),
@@ -25,17 +24,3 @@ class ITestBehavior(model.Schema):
 
 
 alsoProvides(ITestBehavior, IFormFieldProvider)
-
-
-@implementer(ITestBehavior)
-class TestBehavior(MetadataBase):
-    pass
-
-    # image_relation_x = DCFieldProperty(ITestBehavior['image_relation_x'])
-
-
-# @implementer(ITestBehavior)
-# class TestBehavior(MetadataBase):
-#     def __init__(self, context):
-#         self.context = context
-

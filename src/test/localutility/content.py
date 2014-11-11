@@ -13,7 +13,7 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 class IProva(model.Schema):
 
     image_relation = RelationChoice(
-        title=u"Lead Image - related",
+        title=u"Lead Image - field nel content type",
         source=ObjPathSourceBinder(
             object_provides=IImage.__identifier__
         ),
