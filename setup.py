@@ -29,6 +29,9 @@ setup(name='test.localutility',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.app.contenttypes',
+          'plone.app.dexterity [relations]',
+          'plone.formwidget.contenttree >= 1.0.9'
       ],
       entry_points="""
       # -*- Entry points: -*-
