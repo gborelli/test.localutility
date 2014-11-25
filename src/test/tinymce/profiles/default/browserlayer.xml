@@ -1,0 +1,5 @@
+<layers>
+  <layer
+    name="test.tinymce"
+    interface="test.tinymce.interfaces.IBrowserLayer" />
+</layers>
