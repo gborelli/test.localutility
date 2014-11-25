@@ -3,10 +3,10 @@ import os
 
 version = '1.0'
 
-setup(name='test.localutility',
+setup(name='test.tinymce',
       version=version,
-      description="test.localutility",
-      long_description="Local utility uninstall test",
+      description="test.tinymce",
+      long_description="Test tinymce",
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
@@ -29,9 +29,7 @@ setup(name='test.localutility',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'plone.app.contenttypes',
-          'plone.app.dexterity [relations]',
-          'plone.formwidget.contenttree >= 1.0.9'
+          'z3c.jbot'
       ],
       entry_points="""
       # -*- Entry points: -*-
